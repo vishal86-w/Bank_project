@@ -90,8 +90,8 @@ public class UserEmailControl {
 
 	
 	public static void sendEmailWithAttachment(String toEmail, String subject, String body, String filePath) {
-	    final String fromEmail = "vishal679205@gmail.com";
-	    final String password = "pwll olnn wqmb umyo";
+	    final String fromEmail = "your email here";
+	    final String password = "your App password";
 
 	    Properties props = new Properties();
 	    props.put("mail.smtp.host", "smtp.gmail.com");

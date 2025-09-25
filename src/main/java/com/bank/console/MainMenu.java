@@ -2,6 +2,7 @@ package com.bank.console;
 
 import java.util.Scanner;
 
+
 public class MainMenu {
 	//reset color 
 	public static final String RESET = "\033[0m";
@@ -35,9 +36,9 @@ public class MainMenu {
 			while(true)
 			{
 				System.out.println(CYAN+"***********Bank Management System***********"+RESET);
-				System.out.println(GREEN+"1. Admin Login"+RESET);
-			    System.out.println(YELLOW+"2. Manager Login"+RESET);
-			    System.out.println(BLUE_BRIGHT+"3. User Login"+RESET);
+				System.out.println(GREEN+"1. Admin portal"+RESET);
+			    System.out.println(YELLOW+"2. Manager portal"+RESET);
+			    System.out.println(BLUE_BRIGHT+"3. Customer portal"+RESET);
 			    System.out.println(RED_BRIGHT+"4. Exit"+RESET);
 			    System.out.print("Choose your role: "+RESET);
 			    
@@ -45,12 +46,15 @@ public class MainMenu {
 			    switch (choice) {
 				case 1:
 					//admin login
+					Admin.AdminPortal();
 					break;
 				case 2:
 					//manager login
+					Manager.ManagerPortal();
 					break;
 				case 3:
 					//user login
+					User.UserPortal();
 					break;
 				case 4:
 					System.out.println("thank you for using our bank");
@@ -58,6 +62,7 @@ public class MainMenu {
 					break;
 				default:
 					System.out.println("Invalid choice , Try Again!!!");
+					show();
 					break;
 				}
 			}
